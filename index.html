@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <form onsubmit="calculateSum(event)">
+        <label for="horske">Horske kolo</label>
+        <input type="checkbox" name="kolo" id="horske">
+        <input type="number" name="pocet" id="pocet-horske" min="0">500/den<br>
+
+        <label for="detske">Detske kolo</label>
+        <input type="checkbox" name="kolo" id="detske">
+        <input type="number" name="pocet" id="pocet-detske" min="0">200/den<br>
+
+        <label for="silnicni">Silnicni kolo</label>
+        <input type="checkbox" name="kolo" id="silnicni">
+        <input type="number" name="pocet" id="pocet-silnicni" min="0">1500/den<br>
+
+        <label for="gravel">Gravel kolo</label>
+        <input type="checkbox" name="kolo" id="gravel">
+        <input type="number" name="pocet" id="pocet-gravel" min="0">2500/den<br>
+
+        <label for="vypujcka-id">Delka vypujcky:</label>
+        <select id="vypujcka-id" name="vypujcka">
+            <option value="petdnu">5 dnu</option>
+            <option value="tyden">7 dnu</option>
+            <option value="dvatydny">14 dnu</option>
+            <option value="mesic">30 dnu</option>
+        </select><br><br>
+
+        <label for="nosic1">Nosic na strechu</label>
+        <input type="radio" name="nosic" id="nosic1">
+        <label for="nosic2">Nosic za auto</label>
+        <input type="radio" name="nosic" id="nosic2">
+        <label for="nosic3">Bez nosice</label>
+        <input type="radio" name="nosic" id="nosic3" checked>
+        <br>
+
+    
+
+        <button type="submit" id="zapujcka-cena" onClick="calculateSum(event)">Vypocet vyse zapujcky dle parametru</button>
+
+        <br>
+
+        <label for="budget">Zadejte sumu, kterou jste ochotni zaplatit:</label>
+        <input type="number" id="budget" min="0">
+
+        <div class="vysledek">
+        </div>
+
+        <label for="zadejmail">Zadejte kontaktni email:</label>
+        <input type="email" id="zadejmail" value="">
+        
+
+    </form>
+
+    <script src="./script.js"></script>
+</body>
+</html>
